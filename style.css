@@ -1,0 +1,88 @@
+/*
+    #4d4848
+    #E1F4CB
+*/
+
+:root {
+    --bg: #fff;
+    --title: #000;
+    --subtitle: #292525;
+}
+
+body {
+    background-color: var(--bg);
+    overflow-x: hidden;
+    flex-wrap: wrap;
+}
+
+main > * {
+    padding-left: 5%;
+}
+
+#blogTitle {
+    margin-left: 5%;
+}
+
+.firstDiv {
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+    flex-wrap: wrap;
+}
+
+#firstImg {
+    max-width: 80%;
+}
+
+main section h1 {
+    color: var(--title);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main section h2 {
+    color: var(--subtitle);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a.btn {
+    width: 50%;
+    display: inline-block;
+    padding: 15px 20px;
+    background-color: rgba(0, 0, 0, 0.747);
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 0;
+}
+
+a.btn:hover {
+    width: 50%;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.747);
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    transform: scale(1.1);
+}
+
+section a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);    
+}
+
+.activism-video {
+    width: 100%;
+    display: flex;
+    gap: 10%;
+    margin-top: 5%;
+}
+
+.activism-video p {
+    max-width: 100%;
+}
+
+footer {
+    margin-top: 2%;
+}
