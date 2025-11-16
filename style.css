@@ -12,22 +12,12 @@
 body {
     background-color: var(--bg);
     overflow-x: hidden;
-    flex-wrap: wrap;
-}
-
-main > * {
-    padding-left: 5%;
-}
-
-#blogTitle {
-    margin-left: 5%;
 }
 
 .firstDiv {
     display: flex;
     flex-direction: row;
     gap: 5%;
-    flex-wrap: wrap;
 }
 
 #firstImg {
@@ -45,10 +35,9 @@ main section h2 {
 }
 
 a.btn {
-    width: 50%;
     display: inline-block;
-    padding: 15px 20px;
     background-color: rgba(0, 0, 0, 0.747);
+    font-size: large;
     color: #ffffff;
     font-weight: 600;
     text-decoration: none;
@@ -56,33 +45,61 @@ a.btn {
 }
 
 a.btn:hover {
-    width: 50%;
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: rgba(0, 0, 0, 0.747);
-    color: #ffffff;
-    font-weight: 600;
-    text-decoration: none;
-    border: none;
     transform: scale(1.1);
 }
 
 section a {
     text-decoration: none;
-    color: rgb(0, 0, 0);    
+    color: rgb(0, 0, 0);
 }
 
 .activism-video {
     width: 100%;
-    display: flex;
-    gap: 10%;
+    padding: 0;
     margin-top: 5%;
+}
+
+.activism-video .video-div {
+    display: flex;
+    width: 100%;
+    gap: 10%;
+    flex-wrap: wrap;
 }
 
 .activism-video p {
     max-width: 100%;
 }
 
+.about-us {
+    display: flex;
+    width: 100vw;
+    align-items: center;
+}
+
+main #about-us-paragraph{
+    width: 40%;
+}
+
+#about-us-svg {
+    max-width: 40%;
+    max-height: 100%;
+}
+
+
+iframe {
+    max-width: 100%;
+    height: auto;
+}
+
 footer {
     margin-top: 2%;
+}
+
+@media (max-width: 768px) {
+
+    .firstDiv {
+        flex-direction: column;
+        text-align: center;
+    }
+
 }
