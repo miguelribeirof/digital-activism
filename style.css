@@ -85,6 +85,30 @@ main #about-us-paragraph{
     max-height: 100%;
 }
 
+.example {
+    max-width: 50%;
+    height: auto;
+    background: rgba(226, 226, 226, 0.493);
+    border-radius: 20px;
+}
+
+.container-example {
+    display: flex;
+    gap: 5%;
+}
+
+#paragraph-DA-example {
+    width: 80%;
+}
+
+#wayToUse-paragraph {
+    width: 70%;
+    margin-bottom: 3%;
+}
+
+.example-link {
+    color: rgb(68, 68, 177);
+}
 
 iframe {
     max-width: 100%;
@@ -97,9 +121,8 @@ footer {
 
 @media (max-width: 768px) {
 
-    .firstDiv {
+    .firstDiv, .container-example {
         flex-direction: column;
         text-align: center;
     }
-
 }
