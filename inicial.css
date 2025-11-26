@@ -17,7 +17,7 @@ body {
 .firstDiv {
     display: flex;
     flex-direction: row;
-    gap: 5%;
+    gap: 3%;
 }
 
 #firstImg {
@@ -115,6 +115,20 @@ iframe {
     height: auto;
 }
 
+.chat {
+    background-color: rgba(207, 205, 205, 0.356);
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.button-createRoom {
+    border: none;
+    color: blue;
+}
+
 footer {
     margin-top: 2%;
 }
@@ -124,5 +138,6 @@ footer {
     .firstDiv, .container-example {
         flex-direction: column;
         text-align: center;
+        gap: 10px;
     }
 }
