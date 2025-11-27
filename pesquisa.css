@@ -1,0 +1,88 @@
+.bloco-fundo{
+    background-color: rgba(227, 227, 227, 0.723);
+    border-radius: 15px;
+    padding: 2rem;
+}
+
+/*Configurações gerais - margens e largura*/
+section{
+    margin-top: 4.5rem;
+    max-width: 100%;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+/*Textos - tamanho e justificado*/
+p, a, ul, blockquote{
+    font-size: 1.1rem;
+    text-align: justify;
+}
+
+h1:hover, h2:hover, h3:hover, h4:hover, h5:hover{
+    color: rgb(108, 107, 107);
+}
+
+/*Lista de realização - troca do símbolo por emoji*/
+
+#realizacaoAtivismo ul {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+}
+
+.linkRealizacao{
+    list-style: none;
+}
+
+.linkRealizacao::before {
+    content: "✔";
+    color: green;
+    margin-right: 10px;
+}
+
+img{
+    border-radius: 10px;
+    height: auto;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.cardFakeNews{
+    max-height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cardFakeNews:hover{
+    transform: translateY(-10px);
+}
+
+.card-img-top{
+    height: 220px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.cardPoliticos{
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cardPoliticos{
+    transform: translateX(-10px);
+}
+
+.btn{
+    background-color: rgb(69, 69, 69);
+    color: beige;
+}
+
+.btn:hover{
+    background-color: rgb(120, 120, 120);
+}
+
+
+/*Rodapé*/
+footer{
+    background-color:  rgb(46, 48, 48);
+    color: beige;
+    height: 3rem;
+}

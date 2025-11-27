@@ -1,0 +1,22 @@
+/*Barra de navegação*/
+
+nav{
+    background-color: rgb(46, 48, 48);
+}
+
+.navbar-brand, .nav-link{
+    color: beige;
+    font-size: 1.5rem;
+}
+
+.navbar-brand:hover, .nav-link:hover{
+    color: rgb(136, 139, 139);
+}
+
+.navbar-toggler-icon{
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%23EAEDF8' stroke-width='2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E")
+}
+
+.navbar-toggler:hover .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%23255B68' stroke-width='2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guia Rápido | Mudanças Climáticas</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+  <!-- Leaflet (Mapa Interativo) -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- CSS local -->
+  <style>
+    body {
+      background-color: #ffffff;
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* Caixa verde clara */
+    .caixa {
+      background-color: #e6f9e6;
+      border-radius: 18px;
+      width: 92%;
+      max-width: 1200px;
+      margin: 0 auto 2.5rem;
+      padding: 24px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    }
+
+    #map {
+      height: 300px;
+      border-radius: 12px;
+      overflow: hidden;
+      margin-top: 1rem;
+    }
+
+    @media (max-width: 576px) {
+      .caixa {
+        padding: 16px;
+        width: 96%;
+      }
+
+      #map {
+        height: 260px;
+      }
+    }
+
+    .footer-container {
+      background-color: #228B22;
+      /* Verde folha */
+      border-radius: 12px;
+      width: 92%;
+      max-width: 1200px;
+      margin: 0 auto 2rem;
+      padding: 24px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    }
+
+    .btn-verde {
+      background-color: #228B22;
+      border: none;
+      color: white;
+      font-weight: 600;
+    }
+
+    .btn-verde:hover {
+      background-color: #1e7a1f;
+      color: white;
+    }
+
+    .custom-card {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .custom-card .card-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .custom-card .btn {
+      margin-top: auto;
+    }
+
+    section {
+      margin-bottom: 2rem;
+    }
+
+    .custom-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .custom-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+    }
+  </style>
+      <link rel="stylesheet" href="navbar.css">
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <!--Nome da empresa e logo-->
+            <a href="#" class="navbar-brand">Planeta Online</a>
+
+            <!--Botão hambúrguer-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!--Conteúdo que será expandido-->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav gap-4 ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Início</a></li>
+                    <li class="nav-item"><a href="pesquisa.html" class="nav-link">Pesquisa</a></li>
+                    <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
+                    <li class="nav-item"><a href="quiz.html" class="nav-link">Quiz</a></li>
+                    <li class="nav-item"><a href="recursos.html" class="nav-link">Relacionados</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+  <div class="navbar navbar-expand-lg bg-body-tertiar d-flex flex-column">
+    <h1>Guia Rápido</h1>
+    <p>Informações, dados, mapa interativo e como ajudar</p>
+  </div>
+
+  <!-- CAIXA VERDE-CLARO -->
+  <div class="caixa">
+
+    <section class="my-3">
+      <h2 class="mb-4">🌱 ONGs e Movimentos Estudantis</h2>
+      <h5 style="font-weight:300; margin-bottom:1rem;">
+        O ativismo digital tem se tornado uma das formas mais importantes de mobilização em defesa do meio ambiente.
+        Através das redes sociais, jovens, ONGs e coletivos divulgam informações, organizam campanhas e pressionam por
+        ações reais.
+      </h5>
+      <div class="row justify-content-center g-4">
+
+        <!-- Card 1 -->
+        <div class="col-md-4">
+          <div class="card custom-card">
+            <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=800&q=80"
+              class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">ONG ClimAção</h5>
+              <p class="card-text">Trabalha com educação ambiental e redução de emissões de carbono.</p>
+              <a href="https://www.wwf.org.br" target="_blank" class="btn btn-verde force w-100">Visitar ONG</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-md-4">
+          <div class="card custom-card">
+            <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Movimento Estudantil Verde</h5>
+              <p class="card-text">Estudantes unidos contra impactos ambientais.</p>
+              <a href="https://escolaverde.org/mev/" target="_blank" class="btn btn-verde force w-100">Conhecer
+                Movimento</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-md-4">
+          <div class="card custom-card">
+            <img src="https://images.pexels.com/photos/6994989/pexels-photo-6994989.jpeg" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Eco Jovem Brasil</h5>
+              <p class="card-text">Jovens apoiando projetos climáticos.</p>
+              <a href="https://oeco.org.br/wp-content/uploads/2023/04/Relatorio-Pesquisa-Juventudes-Meio-Ambiente-e-Mudancas-Climaticas_JUMA_2023.pdf"
+                target="_blank" class="btn btn-verde force w-100">Acessar Site</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- COMO AJUDAR -->
+    <section id="como-ajudar" class="mt-4">
+      <h3>Como Ajudar</h3>
+      <ul class="lista-ajuda">
+        <li>Participar de campanhas de arrecadação.</li>
+        <li>Divulgar ONGs nas redes sociais.</li>
+        <li>Doar materiais, alimentos ou roupas.</li>
+        <li>Apoiar projetos comunitários.</li>
+        <li>Ser voluntário em eventos.</li>
+        <li>Compartilhar eventos estudantis.</li>
+      </ul>
+    </section>
+
+    <!-- Gráfico -->
+    <section class="mb-4 mt-5">
+      <h2>🌡️ Aumento da Temperatura Global</h2>
+      <p>Fonte: NASA — comparado ao período de 1951–1980.</p>
+      <p style="font-weight:300;">
+        O aquecimento global tem aumentado de forma acelerada nas últimas décadas. Esse crescimento está ligado
+        principalmente às emissões de gases do efeito estufa. Observar essa curva é essencial para entender a
+        urgência de ações ambientais.
+      </p>
+      <canvas id="tempChart" height="100"></canvas>
+
+    </section>
+
+    <!-- Lista sobre o gráfico (agora está dentro da caixa) -->
+    <ul class="list-group my-3">
+      <li class="list-group-item">De 1980 até 2024, há uma tendência clara de aumento da temperatura.</li>
+      <li class="list-group-item">Os pontos sobem progressivamente ao longo dos anos.</li>
+      <li class="list-group-item">Mostra aquecimento global significativo.</li>
+      <li class="list-group-item">A curva crescente sugere intensificação contínua.</li>
+    </ul>
+
+
+  </div> <!-- fim da caixa -->
+
+  <!-- JS Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Leaflet -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <!-- Chart.js -->
+  <script>
+    const ctx = document.getElementById('tempChart').getContext('2d');
+
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ["1980", "1990", "2000", "2010", "2020", "2024"],
+        datasets: [{
+          label: "Aumento da Temperatura (°C)",
+          data: [0.12, 0.22, 0.42, 0.68, 0.98, 1.29],
+          borderWidth: 3,
+          borderColor: "#228B22",
+          tension: 0.2
+        }]
+      },
+      options: { responsive: true }
+    });
+  </script>
+
+  <!-- Mapa -->
+  <script>
+    const map = L.map('map').setView([0, 0], 2);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 18
+    }).addTo(map);
+  </script>
+
+  <!-- Rodapé -->
+  <footer class="mt-4">
+    <div class="footer-container text-white text-center py-4">
+      <h5>Projeto Escolar – Mudanças Climáticas</h5>
+      <p style="margin:0;">Feito com dedicação para conscientização ambiental 🌎</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>
