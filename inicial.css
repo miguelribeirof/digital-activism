@@ -239,4 +239,14 @@ footer {
         text-align: center;
         gap: 10px;
     }
+
+    .projects {
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer div {
+        display: flex;
+        flex-direction: column;
+    }
 }
